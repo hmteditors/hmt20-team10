@@ -65,7 +65,19 @@
                           <p>urn:cts:greekLit:tlg0012.tlg001:20.4</p>
                       </div>
                       <div type="comment">
-                          <p></p>
+                          <p>ὅτι οὐκ ἀγγέλῳ κελεύει καθάπερ <persName n="urn:cite2:hmt:pers:pers282"> Ἴριδι</persName>, ἀλλὰ τῷ τὰς ἀγορὰς διαλύειν καὶ πάλιν συνάπτειν ⁑</p>
+                      </div>
+                  </div>
+
+                  <div n="10_5" type="scholion">
+                      <div type="lemma">
+                        <p>κρατὸς ἀπ' <placeName n="urn:cite2:hmt:place:place45">Οὐλύμποιο</placeName>· </p>
+                      </div>
+                      <div type="ref">
+                          <p>urn:cts:greekLit:tlg0012.tlg001:20.5</p>
+                      </div>
+                      <div type="comment">
+                          <p>τοῦτο Βέλτιον τοῖς ἄνω προσνέμειν ἵνα μὴ μακρὸν ὑπερβατὸν ποιῶμεν· τὸ δὲ ἑξῆς ἐστὶ κέλευσε κρατὸς ἀπ Ουλύμποιο  ⁑</p>
                       </div>
                   </div>
                 </body>
