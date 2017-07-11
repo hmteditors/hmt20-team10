@@ -95,13 +95,13 @@
 
                   <div n="10_7" type="scholion">
                       <div type="lemma">
-                        <p>σ</p>
+                        <p>ξεστῇς αἰθούσσησιν</p>
                       </div>
                       <div type="ref">
-                          <p>urn:cts:greekLit:tlg0012.tlg001:20.7</p>
+                          <p>urn:cts:greekLit:tlg0012.tlg001:20.11</p>
                       </div>
                       <div type="comment">
-                          <p>⁑</p>
+                          <p>ὅτι <persName n="urn:cite2:hmt:pers:pers15"><choice><abbr>Ζηνοδ</abbr><expan>Ζηνόδοτος</expan></choice></persName> γράφει ἐφίζανον αἱ δὲ αἴθουσσαι ου   ⁑</p>
                       </div>
                   </div>
                 </body>
