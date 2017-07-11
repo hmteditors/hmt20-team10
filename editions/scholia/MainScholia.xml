@@ -77,7 +77,31 @@
                           <p>urn:cts:greekLit:tlg0012.tlg001:20.5</p>
                       </div>
                       <div type="comment">
-                          <p>τοῦτο Βέλτιον τοῖς ἄνω προσνέμειν ἵνα μὴ μακρὸν ὑπερβατὸν ποιῶμεν· τὸ δὲ ἑξῆς ἐστὶ κέλευσε κρατὸς ἀπ Ουλύμποιο  ⁑</p>
+                          <p>τοῦτο Βέλτιον τοῖς ἄνω προσνέμειν ἵνα μὴ μακρὸν ὑπερβατὸν ποιῶμεν· τὸ δὲ ἑξῆς ἐστὶ <q>κέλευσε κρατὸς ἀπ <placeName n="urn:cite2:hmt:place:place45">Ούλυμποιο</placeName> καλέσσαι</q>· ἡ διπλῇ δὲ ὅτι <placeName n="urn:cite2:hmt:place:place45">Ολυμπος</placeName> ὄρος διὸ πολύπτυχος⁑</p>
+                      </div>
+                  </div>
+
+                  <div n="10_6" type="scholion">
+                      <div type="lemma">
+                        <p>οὔτε τις οὖν ποταμῶν ἀπέην</p>
+                      </div>
+                      <div type="ref">
+                          <p>urn:cts:greekLit:tlg0012.tlg001:20.7</p>
+                      </div>
+                      <div type="comment">
+                          <p>ὅτι ποταμὸν καὶ θάλασσαν τὸν <persName n="urn:cite2:hmt:pers:pers123">Ὠκεανὸν</persName> παραδίδουσι· τὸν δὲ <persName n="urn:cite2:hmt:pers:pers123">ωκεανὸν</persName> οὐ παρέλαβειν εἰς τὸ τῶν θεῶν σύνεδριον ἵνα μη κωλήσῃ· αὐτὸυς τῆς πρὸς ἀλλήλους μαχης πρεσβύτατος ὑπάρχων</p>
+                      </div>
+                  </div>
+
+                  <div n="10_7" type="scholion">
+                      <div type="lemma">
+                        <p>σ</p>
+                      </div>
+                      <div type="ref">
+                          <p>urn:cts:greekLit:tlg0012.tlg001:20.7</p>
+                      </div>
+                      <div type="comment">
+                          <p>⁑</p>
                       </div>
                   </div>
                 </body>
