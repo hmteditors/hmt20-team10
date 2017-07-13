@@ -24,9 +24,9 @@
 1. Get every mention of a person in the scholia _(>6600 matches)_
 2. Find the preceding word of each person
 
-`val anyPerson = Cite2Urn("urn:cite2:hmt:pers:")`
-`val persons = tokens.filter(_.lexMatch(anyPerson))`
-`val prevWordIndex = persons.map(tokens.indexOf(_) - 1)`
+`val anyPerson = Cite2Urn("urn:cite2:hmt:pers:")`<br>
+`val persons = tokens.filter(_.lexMatch(anyPerson))`<br>
+`val prevWordIndex = persons.map(tokens.indexOf(_) - 1)`<br>
 `val prevWords = prevWordIndex.map(tokens(_))`
 
 ---
@@ -56,7 +56,7 @@ But: Fail forward.
 _(11 matches)_
 2. Narrow it down to unique scholia _(6 matches)_
 
-`val demOcc = tokens.filter(_.lexMatch(new Cite2Urn("urn:cite2:hmt:pers:pers669")))`
+`val demOcc = tokens.filter(_.lexMatch(new Cite2Urn("urn:cite2:hmt:pers:pers669")))`<br>
 `val uniqueDemScholia = demOcc.map(_.textNode).distinct`
 
 ---
@@ -65,7 +65,7 @@ _(11 matches)_
 analyse the contents.
 2. We pulled the 6 scholia from the Corpus
 
-`val scholiaTokens = tokens.filter(_.textNode ~~ uniqueDemScholia(0))`
+`val scholiaTokens = tokens.filter(_.textNode ~~ uniqueDemScholia(0))`<br>
 `val scholiaText = scholiaTokens.map(_.readWithAlternate.text).mkString(" ")`
 
 ---
@@ -83,13 +83,20 @@ initial one we started with.
 ---
 # **Reading the Scholia**
 ![](http://www.homermultitext.org/iipsrv?OBJ=IIP,1.0&FIF=/project/homer/pyramidal/VenA/VA184VN_0686.tif&RGN=0.2389,0.6225,0.2248,0.06736&WID=800&CVT=JPEG)
-Commenting on Book 14.221
+<br>Commenting on Book 14.221<br>
 τοῦτέστι πορέυεσθαι οὕτως Ἀρίσταρχος · Δημήτριος δὲ γενεσθαι ἀντι τοῦ γενήσεσθαι βιαίως πάνυ.
  οὐδε γὰρ τὸ πυθέσθαι πυθέεσθαι γίνεται. οὐδὲ τὸ λαβέσθαι λαβέεσθαι ἵνα καὶ τὸ γενεσθαι γενέεσθαι γενήται
 
 ---
 # **Reading the Scholia**
 ![](http://www.homermultitext.org/iipsrv?OBJ=IIP,1.0&FIF=/project/homer/pyramidal/VenA/VA152VN_0654.tif&RGN=0.2371,0.2671,0.2244,0.08147&WID=800&CVT=JPEG)
-Commenting on Book 11.757
+<br>Commenting on Book 11.757<br>
 ἤτοι διασταλτέον ἐπι τὸ Ἀλισίου, ἠ συναπτέον τοῖς ἑξῆς ὡς Δημήτριος ὁ Σκήψιος τάφον τὸν τοῦ Ἀλισίου ουτ οὕτω γὰρ Ἀρίσταρχος γράφει προστιθεὶς
  ὅτι τῶν Ἱπποδαμείας μνηστήρων εἷς ἢν ὁ Ἀλίσιος ἠ Ἀλίσιον μὲν πόλις, Κολώνη δὲ, ουτ οὕτω καλούμενος τόπος ⁑
+
+ ---
+ # **Conclusion**
+ 1. Demetrius does seem to be brought in as a way of resolving conflicts (2/3)
+ 2. Demetrius seems to be an authority on Kolonè
+ 3. Fail forward
+ 4. Never blindly trust the data
