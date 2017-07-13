@@ -2,15 +2,75 @@
 ---
 # **Our Observations**
  ![20.10_1](http://www.homermultitext.org/iipsrv?OBJ=IIP,1.0&FIF=/project/homer/pyramidal/VenA/VA260RN_0431.tif&RGN=0.1831,0.09419,0.6280,0.05740&WID=800&CVT=JPEG)
- -We noticed that Demetrius of Skepsis was cited as a source for an alternate version of the Judgement of Paris.
- -Demetrius of Skepsis is an obscure source.
+ - We noticed that Demetrius of Skepsis was cited as a source for an alternate version of the Judgement of Paris.
+ - Demetrius of Skepsis is an obscure source. More on that later.
+
+
 ---
-
-
 # **Our Question**
--Is Demetrius of Skepsis specifically cited in opposition
+- Is Demetrius of Skepsis specifically cited in contested stories?
+ - We were specifically interested in the _παρα_ + `<persName>` phrase
+- We needed to get data on the scholia Demetrius is mentioned in.
+ - This should be easy.
 
 ---
-# **Collecting our Data Set**
+# **Collecting our Data Set Part 1**
+1. Load the scholia data from the `scholia-xml.cex` file
 
-1
+
+---
+# **Collecting our Data Set Part 2**
+1. Get every mention of a person in the scholia _(>6600 matches)_
+2. Find the preceding word of each person
+
+---
+# **Collecting our Data Set Part 3**
+1. Filter the preceding words for the following criteria:
+ 1. _π_ as a first and _ρ_ as a third character. **NOT** _ε_ as a second character
+ 2. Length of the word over 2 characters and less than 5 characters
+
+_(>140 matches)_
+
+ ---
+ # **Collecting our Data Set Part 4**
+1. Now we have a list of words where it almost matches _παρα_ we go back to
+the following person word
+2. Filter them for Demetrius of Skepsis
+
+---
+# **Setback Nr. 1**
+### There are **no** matches for _παρα_ + Demetrius.###
+But: Fail forward.
+
+---
+# **Collecting our Data Set Part 5 (resumed)**
+1. Find all instances of Demetrius without a restriction on the preceding word
+_(11 matches)_
+2. Narrow it down to unique scholia _(6 matches)_
+
+---
+# **Collecting our Data Set Part 6**
+1. With the scholion CtsUrn we could get the contents of the scholion to
+analyse the contents.
+2. We pulled the 6 scholia from the Corpus
+
+---
+# **Setback Nr. 2**
+### Is _Areithoos_ the same person as Demetrius of Scepsis?
+According to the data he is. Demetrius of Scepsis even occurs in the Iliad!!
+_(7.8)_
+![](http://www.homermultitext.org/iipsrv?OBJ=IIP,1.0&FIF=/project/homer/pyramidal/VenA/VA260RN_0431.tif&RGN=0.07719,0.1815,0.5426,0.2927&WID=800&CVT=JPEG)
+
+---
+# **Collecting our Data Set Part 7**
+1. Removing the incorrectly assigned refernces we got down to 2 scholia besides the
+initial one we started with.
+
+---
+# **Reading the Scholia**
+![](http://www.homermultitext.org/iipsrv?OBJ=IIP,1.0&FIF=/project/homer/pyramidal/VenA/VA184VN_0686.tif&RGN=0.2389,0.6225,0.2248,0.06736&WID=800&CVT=JPEG)
+τοῦτέστι πορέυεσθαι οὕτως Ἀρίσταρχος · Δημήτριος δὲ γενεσθαι ἀντι τοῦ γενήσεσθαι βιαίως πάνυ.
+ οὐδε γὰρ τὸ πυθέσθαι πυθέεσθαι γίνεται. οὐδὲ τὸ λαβέσθαι λαβέεσθαι ἵνα καὶ τὸ γενεσθαι γενέεσθαι γενήται
+
+---
+# **Reading the Scholia**
