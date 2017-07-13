@@ -1,26 +1,41 @@
-# **Citing Sources in the Venetus A**
+# Citing Sources in the Venetus A
+
+Mees Gelein, James Garry
+
 ---
-# **Our Observations**
+
+## Demetrius of Skepsis
+
+
  ![20.10_1](http://www.homermultitext.org/iipsrv?OBJ=IIP,1.0&FIF=/project/homer/pyramidal/VenA/VA260RN_0431.tif&RGN=0.1831,0.09419,0.6280,0.05740&WID=800&CVT=JPEG)
- - We noticed that Demetrius of Skepsis was cited as a source for an alternate version of the Judgement of Paris.
- - Demetrius of Skepsis is an obscure source. More on that later.
+
+
+ - source for an alternate version of the Judgement of Paris
+ - who is he?
 
 
 ---
-# **Our Question**
+
+## Our Question
+
+
 - Is Demetrius of Skepsis specifically cited in contested stories?
  - We were specifically interested in the _παρα_ + `<persName>` phrase
 - We needed to get data on the scholia Demetrius is mentioned in.
  - This should be easy.
 
 ---
-# **Collecting our Data Set Part 1**
+
+## Collecting our Data Set Part 1
+
 1. Load the scholia data from the `scholia-xml.cex` file
 
 `val scholia = CorpusSource.fromFile("data/scholia-xml.cex", "#")`
 
 ---
-# **Collecting our Data Set Part 2**
+
+## Collecting our Data Set Part 2
+
 1. Get every mention of a person in the scholia _(>6600 matches)_
 2. Find the preceding word of each person
 
@@ -30,28 +45,37 @@
 `val prevWords = prevWordIndex.map(tokens(_))`
 
 ---
-# **Collecting our Data Set Part 3**
+
+## Collecting our Data Set Part 3
+
 1. Filter the preceding words for the following criteria:
- 1. _π_ as a first and _ρ_ as a third character. **NOT** _ε_ as a second character
- 2. Length of the word over 2 characters and less than 5 characters
+1. _π_ as a first and _ρ_ as a third character. **NOT** _ε_ as a second character
+2. Length of the word over 2 characters and less than 5 characters
 
 `val piWords = prevWords.filter(_.readWithAlternate.text.charAt(0) == 'π')`
 
 _(>140 matches)_
 
- ---
- # **Collecting our Data Set Part 4**
+---
+
+## Collecting our Data Set Part 4
+
+
 1. Now we have a list of words where it almost matches _παρα_ we go back to
 the following person word
 2. Filter them for Demetrius of Skepsis
 
 ---
-# **Setback Nr. 1**
-### There are **no** matches for _παρα_ + Demetrius.###
+
+## Setback Nr. 1
+
+There are **no** matches for _παρα_ + Demetrius.
+
 But: Fail forward.
 
 ---
-# **Collecting our Data Set Part 5 (resumed)**
+## Collecting our Data Set Part 5 (resumed)
+
 1. Find all instances of Demetrius without a restriction on the preceding word
 _(11 matches)_
 2. Narrow it down to unique scholia _(6 matches)_
@@ -60,7 +84,9 @@ _(11 matches)_
 `val uniqueDemScholia = demOcc.map(_.textNode).distinct`
 
 ---
-# **Collecting our Data Set Part 6**
+
+## Collecting our Data Set Part 6
+
 1. With the scholion CtsUrn we could get the contents of the scholion to
 analyse the contents.
 2. We pulled the 6 scholia from the Corpus
@@ -69,33 +95,45 @@ analyse the contents.
 `val scholiaText = scholiaTokens.map(_.readWithAlternate.text).mkString(" ")`
 
 ---
-# **Setback Nr. 2**
-### Is _Areithoos_ the same person as Demetrius of Scepsis?
-According to the data he is. Demetrius of Scepsis even occurs in the Iliad!!
+
+## Setback Nr. 2
+
+Is *Areithoos* the same person as Demetrius of Scepsis?
+
+According to the XML markup he is. "Demetrius of Scepsis" even occurs in the Iliad!!
 _(7.8)_
 ![](http://www.homermultitext.org/iipsrv?OBJ=IIP,1.0&FIF=/project/homer/pyramidal/VenA/VA260RN_0431.tif&RGN=0.07719,0.1815,0.5426,0.2927&WID=800&CVT=JPEG)
 
 ---
-# **Collecting our Data Set Part 7**
-1. Removing the incorrectly assigned refernces we got down to 2 scholia besides the
+
+## Collecting our Data Set Part 7
+
+1. Removing the incorrectly assigned references we got down to 2 scholia besides the
 initial one we started with.
 
 ---
-# **Reading the Scholia**
+
+## Reading the Scholia
+
 ![](http://www.homermultitext.org/iipsrv?OBJ=IIP,1.0&FIF=/project/homer/pyramidal/VenA/VA184VN_0686.tif&RGN=0.2389,0.6225,0.2248,0.06736&WID=800&CVT=JPEG)
-<br>Commenting on Book 14.221<br>
-τοῦτέστι πορέυεσθαι οὕτως Ἀρίσταρχος · Δημήτριος δὲ γενεσθαι ἀντι τοῦ γενήσεσθαι βιαίως πάνυ.
- οὐδε γὰρ τὸ πυθέσθαι πυθέεσθαι γίνεται. οὐδὲ τὸ λαβέσθαι λαβέεσθαι ἵνα καὶ τὸ γενεσθαι γενέεσθαι γενήται
+
+Commenting on Book 14.221
+
+> τοῦτέστι πορέυεσθαι οὕτως Ἀρίσταρχος · Δημήτριος δὲ γενεσθαι ἀντι τοῦ γενήσεσθαι βιαίως πάνυ.  οὐδε γὰρ τὸ πυθέσθαι πυθέεσθαι γίνεται. οὐδὲ τὸ λαβέσθαι λαβέεσθαι ἵνα καὶ τὸ γενεσθαι γενέεσθαι γενήται
 
 ---
-# **Reading the Scholia**
+
+## Reading the Scholia
+
 ![](http://www.homermultitext.org/iipsrv?OBJ=IIP,1.0&FIF=/project/homer/pyramidal/VenA/VA152VN_0654.tif&RGN=0.2371,0.2671,0.2244,0.08147&WID=800&CVT=JPEG)
 <br>Commenting on Book 11.757<br>
 ἤτοι διασταλτέον ἐπι τὸ Ἀλισίου, ἠ συναπτέον τοῖς ἑξῆς ὡς Δημήτριος ὁ Σκήψιος τάφον τὸν τοῦ Ἀλισίου ουτ οὕτω γὰρ Ἀρίσταρχος γράφει προστιθεὶς
  ὅτι τῶν Ἱπποδαμείας μνηστήρων εἷς ἢν ὁ Ἀλίσιος ἠ Ἀλίσιον μὲν πόλις, Κολώνη δὲ, ουτ οὕτω καλούμενος τόπος ⁑
 
  ---
- # **Conclusion**
+
+ ## Conclusion
+
  1. Demetrius does seem to be brought in as a way of resolving conflicts (2/3)
  2. Demetrius seems to be an authority on Kolonè
  3. Fail forward
